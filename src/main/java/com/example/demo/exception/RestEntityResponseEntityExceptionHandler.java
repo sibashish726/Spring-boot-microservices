@@ -19,4 +19,11 @@ public class RestEntityResponseEntityExceptionHandler extends ResponseEntityExce
 	public ErrorMessage employeeNotFoundExpception(EmployeeNotFound exception) {
 		return new ErrorMessage(HttpStatus.NOT_FOUND , exception.getMessage());
    }
+	
+	@ExceptionHandler(Exception.class)
+	@ResponseBody
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+	public ErrorMessage handleException(Exception exception) {
+		return new ErrorMessage(HttpStatus.INTERNAL_SERVER_ERROR , exception.getMessage());
+   }
 }
