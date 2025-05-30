@@ -4,8 +4,8 @@ import java.util.*;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Employee;
 import com.example.demo.exception.EmployeeNotFound;
+import com.example.demo.model.Employee;
 import com.example.demo.service.EmployeeService;
 
 @Service
